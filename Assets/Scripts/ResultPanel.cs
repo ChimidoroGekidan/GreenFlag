@@ -4,7 +4,7 @@ public class ResultPanel : MonoBehaviour
 {
     public void Show(int score)
     {
-        Debug.Log("Score: " + score);
+        Debug.Log("スコア: " + score);
     }
 }
  
