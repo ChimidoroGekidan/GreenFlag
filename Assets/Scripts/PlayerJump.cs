@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D playerRigidbody;
 
     private int jumpsUsed = 0;
     private int maxJumps = 2;
@@ -20,9 +20,9 @@ public class PlayerJump : MonoBehaviour
         if (jumpsUsed < maxJumps)
         {
             jumpsUsed++;
-            if (rb != null)
+            if (playerRigidbody != null)
             {
-                rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+                playerRigidbody.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
             }
             Debug.Log("ジャンプ成功");
         }
